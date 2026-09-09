@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MOBIN TECH | Mobin Iranpoor</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#070b12;color:#fff;line-height:1.8}
+header{padding:20px 6%;display:flex;justify-content:space-between;align-items:center;background:#0b1019;border-bottom:1px solid #172235;position:sticky;top:0;z-index:5}
+.logo{font-size:25px;font-weight:bold;color:#00aaff}
+nav a{color:#ddd;text-decoration:none;margin:0 8px}
+.hero{text-align:center;padding:75px 20px;background:radial-gradient(circle,#10284a,#070b12 65%)}
+.hero h1{font-size:48px;color:#00aaff}
+.hero h2{font-size:25px;margin:10px}
+.hero p{color:#bbb;margin:15px}
+.btn{display:inline-block;background:#008cff;color:white;padding:12px 25px;border-radius:30px;text-decoration:none;margin:8px}
+section{padding:55px 7%;text-align:center}
+h2.title{font-size:32px;color:#00aaff;margin-bottom:25px}
+.search{width:90%;max-width:650px;padding:15px;border-radius:30px;border:1px solid #24344d;background:#101722;color:white;font-size:16px}
+.categories button{margin:7px;padding:10px 18px;border:1px solid #1769aa;background:#0c1624;color:white;border-radius:20px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
+.card{background:#0e1520;border:1px solid #1d2b40;border-radius:18px;padding:22px;text-align:right}
+.card h3{color:#00aaff}
+.price{color:#48e090;font-weight:bold;margin:8px 0}
+.youtube{background:linear-gradient(135deg,#101722,#160b16);border-radius:25px;padding:35px}
+footer{text-align:center;padding:30px;background:#05080d;color:#888}
+@media(max-width:600px){.hero h1{font-size:35px}nav{display:none}}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">⚡ MOBIN TECH</div>
+<nav>
+<a href="#home">خانه</a>
+<a href="#market">خرید و فروش</a>
+<a href="#youtube">یوتیوب</a>
+<a href="#about">درباره من</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>MOBIN TECH</h1>
+<h2>خرید و فروش + تکنولوژی + گیمینگ</h2>
+<p>سایت رسمی Mobin Iranpoor</p>
+<a class="btn" href="#market">🛒 ورود به بازار</a>
+<a class="btn" href="https://youtube.com/@mobintech8" target="_blank">▶️ یوتیوب من</a>
+</section>
+
+<section id="market">
+<h2 class="title">🛍️ بازار خرید و فروش</h2>
+
+<input class="search" id="search" onkeyup="searchProducts()" placeholder="🔎 دنبال چه چیزی می‌گردی؟">
+
+<div class="categories">
+<button onclick="filter('همه')">همه</button>
+<button onclick="filter('موبایل')">📱 موبایل</button>
+<button onclick="filter('کامپیوتر')">💻 کامپیوتر</button>
+<button onclick="filter('گیمینگ')">🎮 گیمینگ</button>
+<button onclick="filter('لوازم خانه')">🏠 لوازم خانه</button>
+<button onclick="filter('پوشاک')">👕 پوشاک</button>
+</div>
+
+<div class="products" id="products">
+
+<div class="card" data-cat="موبایل">
+<h3>📱 iPhone 15 Pro</h3>
+<div class="price">۵۵ میلیون تومان</div>
+<p>موبایل سالم و تمیز</p>
+</div>
+
+<div class="card" data-cat="کامپیوتر">
+<h3>💻 لپ‌تاپ گیمینگ</h3>
+<div class="price">۴۵ میلیون تومان</div>
+<p>مناسب بازی و کار</p>
+</div>
+
+<div class="card" data-cat="گیمینگ">
+<h3>🎮 PlayStation 5</h3>
+<div class="price">۳۲ میلیون تومان</div>
+<p>کنسول گیمینگ</p>
+</div>
+
+<div class="card" data-cat="لوازم خانه">
+<h3>🪑 میز کامپیوتر</h3>
+<div class="price">۴ میلیون تومان</div>
+<p>میز مناسب گیمینگ</p>
+</div>
+
+<div class="card" data-cat="پوشاک">
+<h3>👕 لباس و کفش</h3>
+<div class="price">۲ میلیون تومان</div>
+<p>تمیز و سالم</p>
+</div>
+
+</div>
+</section>
+
+<section id="youtube">
+<div class="youtube">
+<h2 class="title">🎬 کانال یوتیوب MOBIN TECH</h2>
+<p>ویدیوهای تکنولوژی، گیمینگ، تست محصولات و چالش‌ها</p>
+<a class="btn" href="https://youtube.com/@mobintech8" target="_blank">
+مشاهده کانال یوتیوب
+</a>
+</div>
+</section>
+
+<section id="about">
+<h2 class="title">👤 درباره من</h2>
+<p><b>Mobin Iranpoor</b></p>
+<p>سازنده MOBIN TECH | تکنولوژی | گیمینگ | خرید و فروش</p>
+</section>
+
+<footer>
+© 2026 MOBIN TECH — Mobin Iranpoor
+</footer>
+
+<script>
+function filter(cat){
+ document.querySelectorAll('.card').forEach(c=>{
+   c.style.display=(cat==='همه'||c.dataset.cat===cat)?'block':'none';
+ });
+}
+function searchProducts(){
+ let q=document.getElementById('search').value.toLowerCase();
+ document.querySelectorAll('.card').forEach(c=>{
+   c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none';
+ });
+}
+</script>
+
+</body>
+</html>
